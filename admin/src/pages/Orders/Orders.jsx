@@ -72,19 +72,19 @@ const Orders = ({url}) => {
                 }
               })}
               </p>
-              <p className="order-item-name">{order.address.firstName+" "+order.address.lastName}</p>
+              <p className="order-item-name">{order.address.lastName+" "+order.address.firstName}</p>
               <div className="order-item-address">
-                <p>{order.address.street+","}</p>
-                <p>{order.address.city+", "+order.address.state+", "+order.address.country+", "+order.address.zipcode}</p>
+                <p>{order.address.zipcode+", "+order.address.city+","}</p>
+                <p>{order.address.street}</p>
               </div>
               <p className="order-item-phone">{order.address.phone}</p>
             </div>
-            <p>Items : {order.items.length}</p>
-            <p>${order.amount}</p>
+            <p>Ételek : {order.items.length}</p>
+            <p>{order.amount} Ft</p>
             <select onChange={(event)=>statusHandler(event,order._id)} value={order.status}>
-              <option value="Food Processing">Food Processing</option>
-              <option value="Out for delivery">Out for delivery</option>
-              <option value="Delivered">Delivered</option>
+              <option value="Food Processing">Folyamatban</option>
+              <option value="Out for delivery">Szállítás alatt</option>
+              <option value="Delivered">Kiszállítva</option>
             </select>
           </div>
         ))}

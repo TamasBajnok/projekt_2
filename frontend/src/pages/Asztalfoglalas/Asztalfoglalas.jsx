@@ -48,15 +48,15 @@ const Asztalfoglalas = () => {
     <div className='reservation'>
     <form onSubmit={sendData} className="reservation-container">
      <div className="reservation-title">
-         <h2>Reservation</h2>
+         <h2>Foglalás</h2>
          <img src={assets.cross_icon} alt="" />
      </div>
      <div className="reservation-inputs">
-         <input name='name' type="text" placeholder='Your name' required onChange={onChangeHandler} value={data.name}/>
+         <input name='name' type="text" placeholder='Név' required onChange={onChangeHandler} value={data.name}/>
         
-         <input name='email' type="email"  placeholder='Your email' required onChange={onChangeHandler} value={data.email}/>
-         <input name="person"  type="number" min="2" max="24" placeholder='Number of people' required onChange={onChangeHandler} value={data.person}/>
-         <input name='arriveDate' type="date" placeholder='Date' required onChange={onChangeHandler} value={data.arriveDate}/>
+         <input name='email' type="email"  placeholder='Email' required onChange={onChangeHandler} value={data.email}/>
+         <input name="person"  type="number" min="2" max="24" placeholder='Létszám' required onChange={onChangeHandler} value={data.person}/>
+         <input name='arriveDate' type="date" placeholder='Dátum' required onChange={onChangeHandler} value={data.arriveDate}/>
          <select name="time" required onChange={onChangeHandler} value={data.time} >
           <option >Időpont</option>
           <option value="10:00">10:00</option>
@@ -69,9 +69,9 @@ const Asztalfoglalas = () => {
           <option value="17:00">17:00</option>
           <option value="18:00">18:00</option>
          </select>
-         <input onChange={onChangeHandler} value={data.phone} name='phone' type="text" placeholder='Phone number' required/>
+         <input onChange={onChangeHandler} value={data.phone} name='phone' type="text" placeholder='Telefonszám' required/>
      </div>
-     <button type='submit'>Send</button>
+     <button type='submit'>Küldés</button>
     
     </form>
  </div>

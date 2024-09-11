@@ -16,18 +16,18 @@ const Footer = () => {
             </div>
         </div>
         <div className="footer-content-center">
-            <h2>COMPANY</h2>
+            <h2>Cég</h2>
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Delivery</li>
-                <li>Privacy policy</li>
+                <li>Kezdőlap</li>
+                <li>Rólunk</li>
+                <li>Szállítás</li>
+                <li>Adatvédelem</li>
             </ul>   
         </div>
         <div className="footer-content-right">
-           <h2>GET IN TOUCH</h2>
+           <h2>Kerssen minket</h2>
            <ul>
-            <li>+1-212-456-7890</li>
+            <li>+36 70 3378679</li>
             <li>contact@tomato.com</li>
            </ul>
         </div>

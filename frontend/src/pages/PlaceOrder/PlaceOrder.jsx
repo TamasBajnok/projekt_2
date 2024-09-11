@@ -14,9 +14,7 @@ const PlaceOrder = () => {
       email:"",
       street:"",
       city:"",
-      state:"",
       zipcode:"",
-      country:"",
       phone:""
     })
 
@@ -66,43 +64,41 @@ const PlaceOrder = () => {
     <div>
       <form onSubmit={placeOrder} className="place-order">
         <div className="place-order-left">
-          <p className="title">Delivery Infomation</p>
+          <p className="title">Szállítási cím és információk</p>
           <div className="multi-fields">
-            <input required name="firstName" onChange={onChangeHandler} value={data.firstName} type="text" placeholder='First name'/>
-            <input required  name="lastName" onChange={onChangeHandler} value={data.lastName} type="text" placeholder='Last name'/>
+            <input required  name="lastName" onChange={onChangeHandler} value={data.lastName} type="text" placeholder='Keresztnév'/>
+            <input required name="firstName" onChange={onChangeHandler} value={data.firstName} type="text" placeholder='Vezetéknév'/>
+            
           </div>
-          <input required name='email' onChange={onChangeHandler} value={data.email} type="text" placeholder='Email address'/>
-          <input required name='street' onChange={onChangeHandler} value={data.street} type="text" placeholder='Street'/>
+          <input required name='email' onChange={onChangeHandler} value={data.email} type="text" placeholder='Email cím'/>
+          <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text" placeholder='Telefonszám' />
           <div className="multi-fields">
-            <input required name='city' onChange={onChangeHandler} value={data.city} type="text" placeholder='City'/>
-            <input required name='state' onChange={onChangeHandler} value={data.state} type="text" placeholder='State'/>
+            <input required name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="text" placeholder='Irányítószám'/>
+            <input required name='city' onChange={onChangeHandler} value={data.city} type="text" placeholder='Város'/>
           </div>
-          <div className="multi-fields">
-            <input required name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="text" placeholder='Zip code'/>
-            <input required name='country' onChange={onChangeHandler} value={data.country} type="text" placeholder='Country'/>
-          </div>
-          <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text" placeholder='Phone' />
+          <input required name='street' onChange={onChangeHandler} value={data.street} type="text" placeholder='Utca'/>
+          
         </div>
         <div className="place-order-right">
         <div className="cart-total">
-          <h2>Cart Totals</h2>
+          <h2>Kosár Végösszege</h2>
           <div>
           <div className="cart-total-details">
-              <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>Részösszeg</p>
+              <p>{getTotalCartAmount()} Ft</p>
             </div>
             <hr />
             <div className="cart-total-details">
-              <p>Delivery Fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>
+              <p>Szállítási költség</p>
+              <p>{getTotalCartAmount()===0?0:1500} Ft</p>
             </div>
             <hr />
             <div className="cart-total-details">
-              <b>Total</b>
-              <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+              <b>Végösszeg</b>
+              <b>{getTotalCartAmount()===0?0:getTotalCartAmount()+1500} Ft</b>
             </div>
           </div>
-          <button type="submit">PROCEED TO PAYMENT</button>
+          <button type="submit">Ugrás a fizetéshez</button>
         </div>
         </div>
 

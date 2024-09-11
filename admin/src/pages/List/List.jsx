@@ -35,14 +35,14 @@ const List = ({url}) => {
 
   return (
     <div className='list add flex-col'>
-      <p>All Foods List</p>
+      <p>Minden étel megjelenítése</p>
       <div className="list-table">
         <div className="list-table-format title">
-          <b>Image</b>
-          <b>Name</b>
-          <b>Category</b>
-          <b>Price</b>
-          <b>Action</b>
+          <b>Kép</b>
+          <b>Név</b>
+          <b>Kategória</b>
+          <b>Ár</b>
+          <b>Törlés</b>
         </div>
         {list.map((item,index)=>{
           return (

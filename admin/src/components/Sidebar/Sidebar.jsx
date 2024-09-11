@@ -9,19 +9,19 @@ const Sidebar = () => {
       <div className="sidebar-options">
         <NavLink to='/add' className="sidebar-option">
           <img src={assets.add_icon} alt="" />
-          <p>Add Items</p>
+          <p>Étel hozzáadás</p>
         </NavLink>
         <NavLink to='/list' className="sidebar-option">
           <img src={assets.order_icon} alt="" />
-          <p>List Items</p>
+          <p>Ételek listázása</p>
         </NavLink>
         <NavLink to='/orders' className="sidebar-option">
           <img src={assets.order_icon} alt="" />
-          <p>Orders</p>
+          <p>Rendelsék</p>
         </NavLink>
         <NavLink to='/reservations' className="sidebar-option">
           <img src={assets.order_icon} alt="" />
-          <p>Reservations</p>
+          <p>Asztalfoglalások</p>
         </NavLink>
       </div>
       

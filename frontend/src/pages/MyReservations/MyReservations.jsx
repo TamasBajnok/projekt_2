@@ -96,18 +96,18 @@ const MyReservations = () => {
 
   return (
     <div className='my-reservations'>
-      <h2>My Reservations</h2>
+      <h2>Foglalásaim</h2>
       <div className="container">
         {data.map((reservation,index)=>{
             return(
               
                 
                    <div key={index} className="my-reservation-order">
-                    <p>Name: {reservation.name}</p>
-                    <p>Person: {reservation.person}</p>
-                    <p>Date: {reservation.arriveDate[0]}{reservation.arriveDate[1]}{reservation.arriveDate[2]}{reservation.arriveDate[3]}{reservation.arriveDate[4]}{reservation.arriveDate[5]}{reservation.arriveDate[6]}{reservation.arriveDate[7]}{reservation.arriveDate[8]}{reservation.arriveDate[9]}</p>
-                    <p>Time: {reservation.time}</p>
-                    {reservation.items.length!==0?<p>Food: {reservation.items.map((item,index)=>{
+                    <p>Név: {reservation.name}</p>
+                    <p>Létszám: {reservation.person}</p>
+                    <p>Dátum: {reservation.arriveDate[0]}{reservation.arriveDate[1]}{reservation.arriveDate[2]}{reservation.arriveDate[3]}{reservation.arriveDate[4]}{reservation.arriveDate[5]}{reservation.arriveDate[6]}{reservation.arriveDate[7]}{reservation.arriveDate[8]}{reservation.arriveDate[9]}</p>
+                    <p>Időpont {reservation.time}</p>
+                    {reservation.items.length!==0?<p>Ételek: {reservation.items.map((item,index)=>{
                         if (index === reservation.items.length-1) {
                             return item.name+" x "+item.quantity
                         }
@@ -115,9 +115,9 @@ const MyReservations = () => {
                             return item.name+" x "+item.quantity+", "
                         }
                     })}</p>
-                  :<p>Food: none</p>}
+                  :<p>Ételek: nincs</p>}
                   
-                    {reservation.arriveDateAsNumber<=today?<button>You can't change now anything</button>:reservation.items.length==0?<button onClick={()=>placeOrder(reservation._id)}>Add foods from cart</button>:<button onClick={()=>changeOrder(reservation._id,reservation.items.length-1)}>Change</button>}
+                    {reservation.arriveDateAsNumber<=today?<button>Nem tud már változtatni</button>:reservation.items.length==0?<button onClick={()=>placeOrder(reservation._id)}>Ételek hozzáadása a kosárból</button>:<button onClick={()=>changeOrder(reservation._id,reservation.items.length-1)}>Változtatás</button>}
                     
                     
                     
