@@ -26,7 +26,7 @@ const Navbar = ({setShowLogin}) => {
             <Link to='/' onClick={()=>setMenu("home")} className={menu==="home" ? "active" : ""}>Kezdőlap</Link>
             <Link to='/menu' onClick={()=>setMenu("menu")} className={menu==="menu" ? "active" : ""}>Menü</Link>
             <Link to='/gallery' onClick={()=>setMenu("gallery")} className={menu==="gallery" ? "active" : ""}>Galéria</Link>
-            <Link to='/events' onClick={()=>setMenu("events")} className={menu==="events" ? "active" : ""}>Események</Link>
+            <Link to='/events' onClick={()=>setMenu("events")} className={menu==="events" ? "active" : ""}>Rendezvények</Link>
             {token?<Link to='/reservation' onClick={()=>setMenu("reservation")} className={menu==="reservation" ? "active" : ""}>Foglalás</Link>:<Link to='/login' onClick={()=>{setShowLogin(true);setMenu("reservation")}} className={menu==="reservation" ? "active" : ""}>Reservation</Link>}
         </ul>
       <div className="navbar-right">
