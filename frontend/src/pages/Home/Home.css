@@ -1,0 +1,174 @@
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Fejléc */
+.header-home{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('../../assets/fokep3.jpg') no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.header-home-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+   
+    margin-bottom: 25%;
+    margin-left:7%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+.header-home-contents{
+    position: absolute;
+    font-weight: 500;
+    color:white;
+    font-size: max(4.5vw,22px);
+}
+
+
+
+
+@media (max-width:1050px){
+    .header-contents{
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px){
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
+
+
+
+
+
+
+
+
+.btn-reserve {
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Hero szekció */
+
+
+
+.hero-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-text .btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Bemutatkozás */
+.about {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Kiemelt ételek */
+.menu {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.menu .btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Nyitvatartás */
+.hours {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hours h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hours ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.place{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.place h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.place p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

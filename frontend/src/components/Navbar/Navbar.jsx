@@ -27,7 +27,7 @@ const Navbar = ({setShowLogin}) => {
             <Link to='/menu' onClick={()=>setMenu("menu")} className={menu==="menu" ? "active" : ""}>Menü</Link>
             <Link to='/gallery' onClick={()=>setMenu("gallery")} className={menu==="gallery" ? "active" : ""}>Galéria</Link>
             <Link to='/events' onClick={()=>setMenu("events")} className={menu==="events" ? "active" : ""}>Események</Link>
-            {token?<Link to='/reservation' onClick={()=>setMenu("reservation")} className={menu==="reservation" ? "active" : ""}>Foglalás</Link>:<Link to='/login' onClick={()=>{setShowLogin(true);setMenu("reservation")}} className={menu==="reservation" ? "active" : ""}>Reservation</Link>}
+            {token?<Link to='/reservation' onClick={()=>setMenu("reservation")} className={menu==="reservation" ? "active" : ""}>Asztalfoglalás</Link>:<Link to='/login' onClick={()=>{setShowLogin(true);setMenu("reservation")}} className={menu==="reservation" ? "active" : ""}>Asztalfoglalás</Link>}
         </ul>
       <div className="navbar-right">
         <div className="navbar-search-icon">

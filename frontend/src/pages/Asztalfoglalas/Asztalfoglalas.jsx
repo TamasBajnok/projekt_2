@@ -7,7 +7,8 @@ import axios from 'axios'
 
 const Asztalfoglalas = () => {
 
-  const {url,token} = useContext(StoreContext)
+  const {url,token,setMenu} = useContext(StoreContext)
+  setMenu("reservation")
   const navigate = useNavigate()
 
   const [data,setData] = useState({

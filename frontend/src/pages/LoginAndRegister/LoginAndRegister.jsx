@@ -59,24 +59,24 @@ const LoginAndRegister = ({setShowLogin}) => {
     <div className='login-popup'>
        <form onSubmit={onLogin} className="login-popup-container">
         <div className="login-popup-title">
-            <h2>{currState}</h2>
+            {currState==="Login"?<h2>Bejelentkezés</h2>:<h2>Regisztráció</h2>}
             <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
         </div>
         <div className="login-popup-inputs">
-            {currState==="Login"?<></>:  <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Your name' required />}
+            {currState==="Login"?<></>:  <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Név' required />}
            
-            <input name='email' onChange={onChangeHandler} value={data.email} type="email"  placeholder='Your email' required/>
-            <input name='password' onChange={onChangeHandler} value={data.password} type='password' placeholder='Password' required/>
-            {currState==="Sign Up"&&<input name='password_second' onChange={onChangeHandler} value={data.password_second} type='password' placeholder='Password second time' required/>}
+            <input name='email' onChange={onChangeHandler} value={data.email} type="email"  placeholder='Email' required/>
+            <input name='password' onChange={onChangeHandler} value={data.password} type='password' placeholder='Jelszó' required/>
+            {currState==="Sign Up"&&<input name='password_second' onChange={onChangeHandler} value={data.password_second} type='password' placeholder='Jeszó megerősítő' required/>}
         </div>
-        <button type='submit'>{currState==="Sign Up" ? "Create account" : "Login"}</button>
+        <button type='submit'>{currState==="Sign Up" ? "Fiók létrehozása" : "Bejelentkezés"}</button>
         <div className="login-popup-condition">
-            <input type="checkbox" required/>
-            <p>By continuing, i agree to the terms os use & privacy policy</p>
+            {currState==="Sign Up"&&<input type="checkbox" required/>}
+            {currState==="Sign Up"&&<p>A folytatáshoz elfogadom az adatvédelmi és adatkezelési szabályzatokat</p>}
         </div>
         {currState==="Login"
-        ?<p>Create a new account? <span onClick={()=>setCurrState("Sign Up")}>Click here</span></p>
-        :<p>Already have an account? <span onClick={()=>setCurrState("Login")}>Login here</span></p>}
+        ?<p>Készítene egy új fiókot? <span onClick={()=>setCurrState("Sign Up")}>Kattintson ide</span></p>
+        :<p>Már van fiókja? <span onClick={()=>setCurrState("Login")}>Bejelentkezés</span></p>}
         
        
        </form>

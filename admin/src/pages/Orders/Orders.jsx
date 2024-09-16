@@ -51,12 +51,12 @@ const Orders = ({url}) => {
 
   return (
     <div className='order add'>
-      <h3>Order Page</h3>
+      <h3>Rendelések oldal</h3>
       <select name="process" onChange={onChangeHandler} >
-      <option value="All">All</option>
-        <option value="Food Processing">Food Processing</option>
-        <option value="Out for delivery">Out for delivery</option>
-        <option value="Delivered">Delivered</option>
+      <option value="All">Összes</option>
+        <option value="Food Processing">Folyamtban</option>
+        <option value="Out for delivery">Szállítás alatt</option>
+        <option value="Delivered">Kiszállítva</option>
       </select>
       <div className="order-list">
         {orders.map((order,index)=>(

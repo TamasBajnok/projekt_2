@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
@@ -16,6 +16,7 @@ import MyReservations from './pages/MyReservations/MyReservations'
 import ScrollToTop from "react-scroll-to-top";
 import LoginAndRegister from './pages/LoginAndRegister/LoginAndRegister'
 
+
 const App = () => {
 
   const [showLogin, setShowLogin] = useState(false)
@@ -27,7 +28,7 @@ const App = () => {
       <Navbar setShowLogin={setShowLogin}/>
       <Routes>
         <Route path='/login' element={showLogin?<LoginAndRegister setShowLogin={setShowLogin} />:<></>}/>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Home setShowLogin={setShowLogin}/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/order' element={<PlaceOrder/>}/>
         <Route path='/verify' element={<Verify />}/>
@@ -37,6 +38,7 @@ const App = () => {
         <Route path='/gallery' element={<Galeria/>}/>
         <Route path='/events' element={<Rendezveny/>}/>
         <Route path='/reservation' element={<Asztalfoglalas/>}/>
+        
 
       </Routes>
     </div>
