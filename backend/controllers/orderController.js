@@ -36,7 +36,7 @@ const placeOrder = async (req,res)=>{
             price_data:{
                 currency:"HUF",
                 product_data:{
-                    name:"Delivery Charges"
+                    name:"Szállítási költség"
                 },
                 unit_amount:1500*100
             },

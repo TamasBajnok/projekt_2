@@ -6,7 +6,7 @@ const Header = () => {
     <div className='header'>
         <div className="header-contents">
         <h2>Rendeld a kedvenc ételeidet itt nálunk</h2>
-        <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+        <p>Válasszon a változatos étlapról, amely a legfinomabb alapanyagokból és kulináris szakértelemmel elkészített ételek finom választékát tartalmazza. Küldetésünk, hogy kielégítsük vágyait és fokozzuk étkezési élményét, egy-egy ízletes étellel.</p>
         <button>Menü megtekintése</button>
         </div>
     </div>

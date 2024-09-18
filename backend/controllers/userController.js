@@ -72,5 +72,38 @@ const registerUser = async (req,res)=>{
         
     }
 }
+/*
+const forgottenPassword = async(req,res)=>{
+    const {email}=req.body;
+    try {
+        const oldUser = await userModel.findOne({email})
+        if(!oldUser){
+            return res.json({status:"User Not Exists!!"})
+        }
+    const secret = jwt + oldUser.password;
+    const token =  jwt.sign({email:oldUser.email, id: oldUser._id},secret,{expiresIn: "5m"});
+    const link = `http://localhost:4000/reset-password/${oldUser._id}/${token}`
+    console.log(link);
+    } catch (error) {
+        
+    }
+}
+const resetPassword = async(req,res)=>{
+    const {id, token} = req.params;
+    console.log(req.params);
+    res.send("Done")
+    const oldUser = await userModel.findOne({_id:id})
+    if(!oldUser){
+        return res.json({status:"User Not Exists!!"})
+    }
+    const secret = jwt + oldUser.password;
+    try {
+        
+        const verify=jwt.verify(token, secret);
+        res.send("Verified");
+    } catch (error) {
+        res.send("Not Verified");
+    }
+}*/
 
-export {loginUser,registerUser}
+export {loginUser,registerUser, /*forgottenPassword,resetPassword*/}

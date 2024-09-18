@@ -50,5 +50,19 @@ const removeFood = async (req,res) => {
     }
 }
 
+const dailyFoods = async(req,res)=>{
+    try {
+        await foodModel.findOneAndUpdate({status: req.body.meal},{status:0});
+        await foodModel.findByIdAndUpdate(req.body._id,{status:req.body.meal});
 
-export {addFood, listFood, removeFood}
+
+        
+        res.json({success:true,message:"Success"})
+    } catch (error) {
+        console.log(error);
+        res.json({success:false,message:"Error"})
+    }
+}
+
+
+export {addFood, listFood, removeFood, dailyFoods}
