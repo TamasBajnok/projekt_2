@@ -1,17 +1,17 @@
-h1{
+.event h1{
     font-size: 2.5vw;
 }
 
-h2{
+.event h2{
     font-size: 1.5vw;
 }
 
-li{
+.event li{
     font-size: 1vw;
     margin-left: 3vw;
 }
 
-p{
+.event p{
     font-size: 1vw;
 }
 
