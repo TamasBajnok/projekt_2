@@ -87,7 +87,7 @@ const Reservations = ({url}) => {
         {reservations.map((reservation,index)=>(
             <div key={index} className="my-reservation-order">
             <p>Név: {reservation.name}</p>
-           {mod && id==reservation._id? <p>Létszám: <input type="number" value={data.person} name="person" onChange={onChangeHandler} placeholder={reservation.person}></input></p> : <p>Létszám: {reservation.person}</p>}
+           {mod && id==reservation._id? <p>Létszám: <input type="number" min="2" max="24" value={data.person} name="person" onChange={onChangeHandler} placeholder={reservation.person}></input></p> : <p>Létszám: {reservation.person}</p>}
            {mod && id==reservation._id?<p>Dátum: <input type="date"  value={data.date} name="date" onChange={onChangeHandler} placeholder={reservation.arriveDate[0]+reservation.arriveDate[1]+reservation.arriveDate[2]+reservation.arriveDate[3]+reservation.arriveDate[4]+reservation.arriveDate[5]+reservation.arriveDate[6]+reservation.arriveDate[7]+reservation.arriveDate[8]+reservation.arriveDate[9]}></input></p>:<p>Dátum: {reservation.arriveDate[0]}{reservation.arriveDate[1]}{reservation.arriveDate[2]}{reservation.arriveDate[3]}{reservation.arriveDate[4]}{reservation.arriveDate[5]}{reservation.arriveDate[6]}{reservation.arriveDate[7]}{reservation.arriveDate[8]}{reservation.arriveDate[9]}</p>}
            {mod && id==reservation._id? <p> Időpont: 
            <select name="time" onChange={onChangeHandler} value={data.time} placeholder={reservation.time}>

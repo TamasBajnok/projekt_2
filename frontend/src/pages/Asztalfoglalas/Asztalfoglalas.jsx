@@ -22,8 +22,10 @@ const Asztalfoglalas = () => {
 
   })
 
+  
 
   const onChangeHandler=(event)=>{
+    console.log(data.time)
     const name= event.target.name
     const value= event.target.value
     setData(data=>({...data,[name]:value}))
@@ -42,8 +44,9 @@ const Asztalfoglalas = () => {
     else {
       alert(response.data.message)
     }
+  
   }
-
+ 
   return (
       
     <div className='reservation'>
@@ -59,7 +62,7 @@ const Asztalfoglalas = () => {
          <input name="person"  type="number" min="2" max="24" placeholder='Létszám' required onChange={onChangeHandler} value={data.person}/>
          <input name='arriveDate' type="date" placeholder='Dátum' required onChange={onChangeHandler} value={data.arriveDate}/>
          <select name="time" required onChange={onChangeHandler} value={data.time} >
-          <option >Időpont</option>
+          <option value="">Időpont</option>
           <option value="10:00">10:00</option>
           <option value="11:00">11:00</option>
           <option value="12:00">12:00</option>
