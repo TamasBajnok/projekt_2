@@ -1,0 +1,193 @@
+h1{
+    font-size: 2.5vw;
+}
+
+h2{
+    font-size: 1.5vw;
+}
+
+li{
+    font-size: 1vw;
+    margin-left: 3vw;
+}
+
+p{
+    font-size: 1vw;
+}
+
+
+.title-event{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('..\..\assets\event ballroom.jpg') no-repeat;
+    background-size:cover;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title-event-contents{
+    width: 100%;
+    height: 60%;
+    animation: fadeIn 3s;
+    backdrop-filter: brightness(55%);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 75px;
+    padding-left: 6vw;
+    gap: 1.5vw;
+}
+
+.title-event-contents h2{
+    font-weight: 500;
+    color:white;
+    font-size: max(4.5vw,22px);
+}
+
+.title-event-contents p{
+    color: white;
+    font-size: 1.25vw;  
+    max-width: 75%;
+}
+
+.details-event{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+    margin: 30px auto;
+}
+
+.details-event img{
+    object-fit: cover;
+    max-width: 60%;
+    max-height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;    
+    animation: fadeIn 3s;
+}
+
+.details-event-contents{
+    animation: fadeIn 3s;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+}
+
+
+.room-event {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: left;
+    height: 30vw;
+}
+
+.room-event-contents{
+    animation: fadeIn 3s;
+    width: 31%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+}
+
+.event-gallery{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 69%;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+.event-gallery img{
+    object-fit: cover;
+    width: 49%;
+    height: 15vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation: fadeIn 3s;
+}
+
+
+.event-gallery a{
+    width: 49%; 
+    height: 15vw;
+}
+
+.event a{
+    background-color: rgb(255, 76, 36);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-weight: 700;
+    animation: fadeIn 3s;   
+}
+
+.event a:hover{
+    background-color: hsl(11, 100%, 47%);
+}
+
+.food-event{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: left;
+    height: 30vw;
+}
+
+.food-event-contents{
+    animation: fadeIn 3s;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+}
+
+.contact-event{
+    width: 100%;
+    background-color: rgb(255, 76, 36);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+    animation: fadeIn 3s;
+}
+
+.contact-event li{
+    list-style-type: none;
+    font-size: 1.5vw;
+    margin: 10px;
+}
