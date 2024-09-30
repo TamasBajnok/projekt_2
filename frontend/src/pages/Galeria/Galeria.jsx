@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Galeria.css';
+import { StoreContext } from '../../context/StoreContext';
 
 const Galeria = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
   const [galleryItems, setGalleryItems] = useState([]);
+
+  const {setMenu} = useContext(StoreContext);
 
   useEffect(() => {
     const loadGalleryItems = () => {
@@ -21,6 +24,7 @@ const Galeria = () => {
     };
 
     loadGalleryItems();
+    setMenu("gallery");
   }, []);
 
   const openModal = () => setModalOpen(true);

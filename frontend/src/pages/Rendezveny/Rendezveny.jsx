@@ -59,7 +59,7 @@ const Rendezveny = () => {
         <div className='event-gallery'>
           <img src='/first_room_2.jpg' alt='First Room Pic 1'/>
           <img src='/first_room_1.jpg' alt='First Room Pic 2'/>
-          <Link to='/gallery' onClick={()=>{window.scrollTo(0,0).then();setMenu("gallery")}}>Galéria</Link>
+          <Link to='/gallery' onClick={()=>{window.scrollTo(0,0).then()}}>Galéria</Link>
           <img src='/first_room_3.jpg' alt='First Room Pic 3'/>
         </div>
       </div>
