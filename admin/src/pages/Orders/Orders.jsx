@@ -54,9 +54,9 @@ const Orders = ({url}) => {
       <h3>Rendelések oldal</h3>
       <select name="process" onChange={onChangeHandler} >
       <option value="All">Összes</option>
-        <option value="Food Processing">Folyamtban</option>
-        <option value="Out for delivery">Szállítás alatt</option>
-        <option value="Delivered">Kiszállítva</option>
+        <option value="Folyamatban">Folyamatban</option>
+        <option value="Szállítás alatt">Szállítás alatt</option>
+        <option value="Kiszállítva">Kiszállítva</option>
       </select>
       <div className="order-list">
         {orders.map((order,index)=>(
@@ -82,9 +82,9 @@ const Orders = ({url}) => {
             <p>Ételek : {order.items.length}</p>
             <p>{order.amount} Ft</p>
             <select onChange={(event)=>statusHandler(event,order._id)} value={order.status}>
-              <option value="Food Processing">Folyamatban</option>
-              <option value="Out for delivery">Szállítás alatt</option>
-              <option value="Delivered">Kiszállítva</option>
+              <option value="Folyamatban">Folyamatban</option>
+              <option value="Szállítás alatt">Szállítás alatt</option>
+              <option value="Kiszállítva">Kiszállítva</option>
             </select>
           </div>
         ))}

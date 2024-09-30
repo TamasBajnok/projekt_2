@@ -34,7 +34,7 @@ const Home = ({setShowLogin}) => {
 
     <section className="about">
         <h2>Tisztelt Látogató!</h2>
-        <p>Köszöntöm a győri aranykagyló étterem honlapján, ami egy új, modern, színes és barátságos vendéglő.</p>
+        <p>Köszöntöm a győri Tomato étterem honlapján, ami egy új, modern, színes és barátságos vendéglő.</p>
         <p>Az étteremben 150 főt tudunk leültetni, de ha a vendégeink úgy kívánják kisebb létszámban zártkörű eseményeket is le tudunk bonyolítani.</p>
         <p>Minden héten színes és ízletes menüvel várjuk kedves vendégeinket, van lehetőség asztalfoglalásra, viszont ha nem szeretnének kimozdulni az otthonukból, akkor házhoz rendelést is vállalunk.</p>
         <p>Reméljük hamarosan Önt és családját is kedves vendégeink között üdvözölhetjük és a nálunk eltöltött idő után, szívesen visszatér még hozzánk.</p>

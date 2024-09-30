@@ -59,7 +59,7 @@ const Rendezveny = () => {
         <div className='event-gallery'>
           <img src='/first_room_2.jpg' alt='First Room Pic 1'/>
           <img src='/first_room_1.jpg' alt='First Room Pic 2'/>
-          <Link to='/gallery' onClick={()=>setMenu("gallery")}>Galéria</Link>
+          <Link to='/gallery' onClick={()=>{window.scrollTo(0,0).then();setMenu("gallery")}}>Galéria</Link>
           <img src='/first_room_3.jpg' alt='First Room Pic 3'/>
         </div>
       </div>
@@ -76,7 +76,7 @@ const Rendezveny = () => {
         <div className='event-gallery'> 
             <img src='/second_room_3.jpg' alt='Second Room Pic 1' />
             <img src='/second_room_1.jpg' alt='Second Room Pic 2' />
-            <Link to='/gallery' onClick={()=>setMenu("gallery")}>Galéria</Link>
+            <Link to='/gallery' onClick={()=>{window.scrollTo(0,0).then();setMenu("gallery")}}>Galéria</Link>
             <img src='/second_room_2.jpg' alt='Second Room Pic 3' />
         </div>
       </div>
@@ -92,7 +92,7 @@ const Rendezveny = () => {
         <div className='event-gallery'> 
             <img src='/food_1.png' alt='Food Event Pic 1' />
             <img src='/food_18.png' alt='Food Event Pic 2' />
-            <Link to='/menu' onClick={() => setMenu("menu")}>Menü</Link>
+            <Link to='/menu' onClick={() =>{window.scrollTo(0,0).then(); setMenu("menu")}}>Menü</Link>
             <img src='/food_25.png' alt='Food Event Pic 3' />
         </div>
       </div>

@@ -12,7 +12,7 @@ const Add = ({url}) => {
         name:"",
         description:"",
         price:"",
-        category: "Salad"
+        category: "Saláta"
     })
 
     const onChangeHandler= (event) =>{
@@ -37,7 +37,7 @@ const Add = ({url}) => {
                     name:"",
                     description:"",
                     price:"",
-                    category: "Salad"
+                    category: "Saláta"
                 })
             setImage(false);
             toast.success(response.data.message)
@@ -70,14 +70,14 @@ const Add = ({url}) => {
                 <div className="add-category flex-col">
                     <p>Termék kategóriája</p>
                     <select  onChange={onChangeHandler} name="category">
-                        <option value="Salad">Saláta</option>
-                        <option value="Rolls">Tekercs</option>
-                        <option value="Deserts">Desszert</option>
-                        <option value="Sandwich">Szenvics</option>
-                        <option value="Cake">Torta</option>
-                        <option value="Pure Veg">Vegetáriánus</option>
-                        <option value="Pasta">Amerikai tészta</option>
-                        <option value="Noodles">Ázsia tészta</option>
+                        <option value="Saláta">Saláta</option>
+                        <option value="Tekercs">Tekercs</option>
+                        <option value="Desszert">Desszert</option>
+                        <option value="Szendvics">Szendvics</option>
+                        <option value="Torta">Torta</option>
+                        <option value="Vegetáriánus">Vegetáriánus</option>
+                        <option value="Amerikai tészta">Amerikai tészta</option>
+                        <option value="Ázsia tészta">Ázsia tészta</option>
                     </select>
                 </div>
                 <div className="add-price flex-col">

@@ -51,30 +51,40 @@ const Reservations = ({url}) => {
       }
 
       const changeData = async(id,person,date,time)=>{
-        
-        if(data.person==0){
-          data.person=person
-        }
-        if(data.date==""){
-          data.date=date
+        if(data.person>=0){
+          if(data.person==0){
+            data.person=person
+          }
+          if(data.date==""){
+            data.date=date
 
-        }
-        data.arriveDateAsNumber=data.date[0]+data.date[1]+data.date[2]+data.date[3]+data.date[5]+data.date[6]+data.date[8]+data.date[9]
-        if(data.time==""){
-          data.time=time
-        }
+          }
+            data.arriveDateAsNumber=data.date[0]+data.date[1]+data.date[2]+data.date[3]+data.date[5]+data.date[6]+data.date[8]+data.date[9]
+            if(data.time==""){
+            data.time=time
+            }
         
-          const response = await axios.post(url+"/api/reservation/changeData",{_id:id,person:data.person,date:data.date,time:data.time, arriveDateAsNumber:data.arriveDateAsNumber});
-          if (response.data.success) {
+            const response = await axios.post(url+"/api/reservation/changeData",{_id:id,person:data.person,date:data.date,time:data.time, arriveDateAsNumber:data.arriveDateAsNumber});
+            if (response.data.success) {
             toast.success(response.data.message)
-        }else{
-          toast.error("Error")
+          }else{
+            toast.error("Error")
+          }
+          setMod(false)
+          fetchAllReservations()
+          data.person="";
+          data.date=""
         }
-        setMod(false)
-        fetchAllReservations()
-        data.person="";
-        data.date=""
-    }
+        else{
+          alert("Hiba")
+        }
+      }
+        
+      
+        
+      
+        
+    
 
       useEffect(()=>{
         fetchAllReservations()

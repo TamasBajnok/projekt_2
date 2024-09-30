@@ -60,7 +60,7 @@ const LoginAndRegister = ({setShowLogin}) => {
        <form onSubmit={onLogin} className="login-popup-container">
         <div className="login-popup-title">
             {currState==="Login"?<h2>Bejelentkezés</h2>:<h2>Regisztráció</h2>}
-            <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" />
+            
         </div>
         <div className="login-popup-inputs">
             {currState==="Login"?<></>:  <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Név' required />}

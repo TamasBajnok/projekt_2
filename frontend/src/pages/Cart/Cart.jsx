@@ -66,13 +66,13 @@ const Cart = () => {
           <button onClick={()=>navigate('/order')}>Tovább a vásárláshoz</button>
         </div>
         <div className="cart-promocode">
-          <div>
+        {/*<div>
             <p>Ha van kuponkódja, Írja be ide</p>
             <div className="cart-promocode-input">
               <input type='text' placeholder='kuponkód'/>
               <button>Felhasznál</button>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </div>
