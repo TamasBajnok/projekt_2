@@ -61,6 +61,7 @@
 .my-reservation-order .choosen_button_good{
     border: none;
     margin-bottom: 5px;
+    margin-left: 10px;
     padding: 12px 29px;
     border-radius: 4px;
     background-color: lightgreen;
