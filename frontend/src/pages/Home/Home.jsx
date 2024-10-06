@@ -76,9 +76,9 @@ const Home = ({setShowLogin}) => {
     <section className="hours">
         <h2>Nyitvatartás</h2>
         <ul>
-            <li>Hétfő - Péntek: 11:00 - 22:00</li>
-            <li>Szombat: 12:00 - 24:00</li>
-            <li>Vasárnap: 12:00 - 20:00</li>
+            <li>Hétfő - Péntek: 10:00 - 20:00</li>
+            <li>Szombat: 10:00 - 21:00</li>
+            <li>Vasárnap: 10:00 - 20:00</li>
         </ul>
     </section>
     <div className='place'>

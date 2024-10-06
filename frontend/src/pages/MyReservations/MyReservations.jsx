@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const MyReservations = () => {
-    
+
     const {url,token,food_list,cartItems, setCartItems} = useContext(StoreContext);
     const [data,setData] = useState([]);
     const navigate = useNavigate()
@@ -15,10 +15,8 @@ const MyReservations = () => {
     const fetchOrders = async () => {
         const response = await axios.post(url+"/api/reservation/reservations",{},{headers:{token}})
         setData(response.data.data);
-        
-      
     }
-
+    
     useEffect(()=>{
         if(token){
             fetchOrders();
@@ -93,7 +91,6 @@ const MyReservations = () => {
     else{
       today+=String(dt.getDate())
     }
-
   return (
     <div className='my-reservations'>
       <h2>Foglalásaim</h2>
@@ -117,8 +114,8 @@ const MyReservations = () => {
                     })}</p>
                   :<p>Ételek: nincs</p>}
                   
-                    {reservation.arriveDateAsNumber<=today?<button>Nem tud már változtatni</button>:reservation.items.length==0?<button onClick={()=>placeOrder(reservation._id)}>Ételek hozzáadása a kosárból</button>:<button onClick={()=>changeOrder(reservation._id,reservation.items.length-1)}>Változtatás</button>}
-                    
+                    {(reservation.status==null || !reservation.status) ? <></> : reservation.arriveDateAsNumber<=today?<button>Nem tud már változtatni</button>:reservation.items.length==0?<button onClick={()=>placeOrder(reservation._id)}>Ételek hozzáadása a kosárból</button>:<button onClick={()=>changeOrder(reservation._id,reservation.items.length-1)}>Változtatás</button>}
+                    {reservation.status==null ? <p>Foglalás feldolgozás alatt</p>:reservation.status?<p>A foglalását sikeresen feldolgoztuk</p>:<p>Sajnos ezt az időpontot nem tudja lefoglalni kérem vállasszon egy másikat!</p>}
                     
                     
                     </div>

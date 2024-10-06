@@ -47,7 +47,35 @@
     cursor: pointer;
     color: #454545;
 }
+.my-reservation-order .accept_button{
+    border: none;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 12px 1px;
+    border-radius: 4px;
+    background-color: #ffe1e1;
+    cursor: pointer;
+    color: #454545;
 
+}
+.my-reservation-order .choosen_button_good{
+    border: none;
+    margin-bottom: 5px;
+    padding: 12px 29px;
+    border-radius: 4px;
+    background-color: lightgreen;
+    color: #454545;
+    
+}
+.my-reservation-order .choosen_button_bad{
+    border: none;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 12px 31px;
+    border-radius: 4px;
+    background-color: lightcoral;
+    color: #454545;
+}
 @media (max-width:1000px){
     .my-reservation-order{
         grid-template-columns: 1fr 2fr 1fr;

@@ -62,11 +62,11 @@ const verifyOrder = async (req,res) =>{
     try {
         if(success=="true"){
             await orderModel.findByIdAndUpdate(orderId,{payment:true});
-            res.json({success:true,message:"Paid"})
+            res.json({success:true,message:"Fizetve"})
         }
         else{
             await orderModel.findByIdAndDelete(orderId);
-            res.json({success:false,message:"Not Paid"})
+            res.json({success:false,message:"Nincs fizetve"})
         }
     } catch (error) {
         console.log(error)

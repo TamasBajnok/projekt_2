@@ -66,7 +66,7 @@ const LoginAndRegister = ({setShowLogin}) => {
             {currState==="Login"?<></>:  <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Név' required />}
            
             <input name='email' onChange={onChangeHandler} value={data.email} type="email"  placeholder='Email' required/>
-            <input name='password' onChange={onChangeHandler} value={data.password} type='password' placeholder='Jelszó' required/>
+            <input name='password' onChange={onChangeHandler} value={data.password} type='password' placeholder='Jelszó (min. 8 karakter)' required/>
             {currState==="Sign Up"&&<input name='password_second' onChange={onChangeHandler} value={data.password_second} type='password' placeholder='Jeszó megerősítő' required/>}
         </div>
         <button type='submit'>{currState==="Sign Up" ? "Fiók létrehozása" : "Bejelentkezés"}</button>

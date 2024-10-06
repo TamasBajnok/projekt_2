@@ -14,7 +14,7 @@ const PlaceOrder = () => {
       email:"",
       street:"",
       city:"",
-      zipcode:"",
+      postcode:"",
       phone:""
     })
 
@@ -37,7 +37,7 @@ const PlaceOrder = () => {
       let orderData = {
         address:data,
         items: orderItems,
-        amount:getTotalCartAmount()+2,
+        amount:getTotalCartAmount()+1500,
       }
       let response = await axios.post(url+"/api/order/place",orderData,{headers:{token}})
       if(response.data.success) {
@@ -73,7 +73,7 @@ const PlaceOrder = () => {
           <input required name='email' onChange={onChangeHandler} value={data.email} type="text" placeholder='Email cím'/>
           <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text" placeholder='Telefonszám' />
           <div className="multi-fields">
-            <input required name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="text" placeholder='Irányítószám'/>
+            <input required name='postcode' onChange={onChangeHandler} value={data.postcode} type="text" placeholder='Irányítószám'/>
             <input required name='city' onChange={onChangeHandler} value={data.city} type="text" placeholder='Város'/>
           </div>
           <input required name='street' onChange={onChangeHandler} value={data.street} type="text" placeholder='Utca'/>

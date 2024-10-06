@@ -81,7 +81,16 @@ const Reservations = ({url}) => {
       }
         
       
-        
+      const changeStatus= async(id, bool)=>{
+        const response = await axios.post(url+"/api/reservation/statusChange",{id:id,status:bool});
+        if (response.data.success) {
+          toast.success(response.data.message)
+        }else{
+          toast.error("Error")
+        }
+        fetchAllReservations()
+
+      }
       
         
     
@@ -128,9 +137,11 @@ const Reservations = ({url}) => {
           :<p>Ételek: nincs</p>}
           </div>
           
-
-          {mod && id==reservation._id?<button onClick={()=>changeData(reservation._id,reservation.person,reservation.arriveDate, reservation.time)}>Mentés</button>:<button onClick={()=>{setMod(true),setId(reservation._id)}}>Változtatás</button>}
-          {mod && id==reservation._id?<button onClick={()=>setMod(false)}>Vissza</button>:<button onClick={()=>deleteReservation(reservation._id)}>Törlés</button>}
+          {reservation.status==null && <div><button className='accept_button' onClick={()=>changeStatus(reservation._id,true)}>Foglalás elfogadása</button><button className='accept_button' onClick={()=>changeStatus(reservation._id, false)}>Foglalás elutsaítása</button></div>}
+          {reservation.status ? <div><button className='choosen_button_good'>Elfogadva</button><button className='accept_button' onClick={()=>changeStatus(reservation._id, false)}>Foglalás elutsaítása</button></div>: reservation.status==false && <div><button className='accept_button' onClick={()=>changeStatus(reservation._id,true)}>Foglalás elfogadása</button><button className='choosen_button_bad'>Elutasítva</button></div>}
+          
+          {(mod && id==reservation._id)?<button onClick={()=>changeData(reservation._id,reservation.person,reservation.arriveDate, reservation.time)}>Mentés</button>:<button onClick={()=>{setMod(true),setId(reservation._id)}}>Változtatás</button>}
+          {(mod && id==reservation._id)?<button onClick={()=>setMod(false)}>Vissza</button>:<button onClick={()=>deleteReservation(reservation._id)}>Törlés</button>}
           </div>
         ))}
       </div>

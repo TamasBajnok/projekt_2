@@ -103,6 +103,17 @@ const changeData = async (req,res) =>{
     }
 }
 
+const statusChange= async(req,res)=>{
+    try{
+        await  reservationModel.findOneAndUpdate({_id:req.body.id},{status:req.body.status})
+        res.json({success:true,message:"Successfully updated"})
+    }
+    catch (error) {
+        console.log("Error")
+        res.json({success:false,message:"Error"})
+    }
+}
 
 
-export {sendReservation,userReservations, placeOrder, changeOrder, showReservations,deleteReservation, changeData}
+
+export {sendReservation,userReservations, placeOrder, changeOrder, showReservations,deleteReservation, changeData,statusChange}
